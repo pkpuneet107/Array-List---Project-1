@@ -10,6 +10,7 @@ package a1;
 
 public class Summer {
    private int[] nums;
+   int count;
    // Any other data fields you decide you need can go here.
 
    public Summer(int n) {
@@ -18,33 +19,51 @@ public class Summer {
       you would need to do something with that field here.
       */
       /*Your code here */
+      nums = new int[n];
+      count = 0;
    }
 
    public void add( int num ) {
      // In this method, take the parameter num and put that value into the Summer.
       /*Your code here */
+      nums[count] = num;
+      count++;
    }
-   
-   public int sum ( ) { 
+
+   public int sum ( ) {
      /* In this method, go through the array and add up all the ints
       that have been stored in it so far.
       Note that the sum of ints is of type int, so return the int sum you get.  */
-
       /*Your code here*/
+      int sumvals = 0;
+      for(int i: nums){
+         sumvals += nums[i];
+      }
+      return sumvals;
    }
    
    public int high ( ) { 
      /* Find the largest number stored in the array so far
       and return it. */
-
-      /*Your code here */
+      int highval = 0;
+      for(int i: nums){
+         if(nums[i] >= highval){
+            highval = nums[i];
+         }
+      }
+      return highval;
    }
    
    public int low ( ) { 
      /* Find the smallest number stored in the array so far
       and return it. */
-
-      /*Your code here */
+      int lowval = nums[0];
+      for(int i: nums){
+         if(nums[i] <= lowval){
+            lowval = nums[i];
+         }
+      }
+      return lowval;
    }
    
    public double average( ) {
@@ -52,14 +71,26 @@ public class Summer {
       so far, and return it.
       Note that the average of ints might produce a double, so
       we are returning a double.
-     
+
       HEADS UP
       This method might get called before there are any 
       ints stored in the array, so you need to guard
       against divide by zero.
-      We will simply define the average of no numbers
+      We will simply define the `average of no numbers
       to be 0.0 so return that if the array has no numbers in it.
        */
+      double average_val = 0.0;
+      if(nums.length == 0){
+         return 0.0;
+      }
+      else{
+         double sum = 0.0;
+         for(int i: nums){
+            sum += nums[i];
+         }
+         average_val = sum/nums.length;
+         return average_val;
+      }
 
       /*Your code here */
 
@@ -79,13 +110,28 @@ public class Summer {
       so again if you are trying to take an average on no numbers
       simply return 0.0
    */
-
+      double average_val_over = 0.0;
+      if(nums.length == 0){
+         return 0.0;
+      }
+      else{
+         double sum = 0.0;
+         int above_vals = 0;
+         for(int i: nums){
+            if(nums[i] > thresh){
+               sum += nums[i];
+               above_vals += 1;
+            }
+         average_val_over = sum/above_vals;
+         }
+      }
+      return average_val_over;
       /*Your code here */
    }
    
    public int count ( ) {  
-     //Return the number of ints that have been stored in the array.
-       
+     //Return the number of ints thLat have been stored in the array.
+      return count;
      /*Your code here */
 
    }
