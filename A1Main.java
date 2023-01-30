@@ -91,7 +91,7 @@ public class A1Main {
       /*Your code here */
       System.out.println();
       System.out.print("Sum of odds: ");
-      System.out.print(evenSummer.sum());
+      System.out.print(oddSummer.sum());
       /*Your code here */
       System.out.println();
       System.out.print("Average of odds: ");
