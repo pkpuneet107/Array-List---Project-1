@@ -45,7 +45,7 @@ public class Summer {
    public int high ( ) { 
      /* Find the largest number stored in the array so far
       and return it. */
-      int highval = 0;
+      int highval = Integer.MIN_VALUE;
       for(int i = 0; i < count; i++){
          if(nums[i] >= highval){
             highval = nums[i];
@@ -116,18 +116,22 @@ public class Summer {
       simply return 0.0
    */
       double average_val_over = 0.0;
-      if(nums.length == 0){
+      if(count == 0){
          return 0.0;
       }
       else{
          double sum = 0.0;
          int above_vals = 0;
+         int no_val = 0;
          for(int i = 0; i < count; i++){
             if(nums[i] > thresh){
                sum += nums[i];
                above_vals += 1;
             }
          average_val_over = sum/above_vals;
+         }
+         if(sum == 0){
+            return no_val;
          }
       }
       return average_val_over;
