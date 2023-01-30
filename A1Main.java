@@ -60,11 +60,10 @@ public class A1Main {
       /*Hint: Pay careful attention to whether or not your
       inserted code prints output on the same line or a new line. */
     
-    
+      System.out.println();
       System.out.print("Number of evens: " + evenSummer.count());
       System.out.println();
       System.out.print("Sum of evens: " + evenSummer.sum());
-
       System.out.println();
       System.out.print("Average of evens: " + evenSummer.average());
       System.out.println();
@@ -74,7 +73,7 @@ public class A1Main {
       System.out.println();
       System.out.print("Average of evens over 10: " + evenSummer.avgOver(10));
       System.out.println();
-      
+
       System.out.print("Number of odds: " + oddSummer.count());
       System.out.println();
       System.out.print("Sum of odds: " + oddSummer.sum());

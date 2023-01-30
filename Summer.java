@@ -90,7 +90,7 @@ public class Summer {
       }
       else{
          double sum = 0.0;
-         for(int i = 0; i <count; i++){
+         for(int i = 0; i < count; i++){
             sum += nums[i];
          }
          average_val = sum/count;
