@@ -36,7 +36,7 @@ public class Summer {
       Note that the sum of ints is of type int, so return the int sum you get.  */
       /*Your code here*/
       int sumvals = 0;
-      for(int i: nums){
+      for(int i = 0; i < nums.length; i++){
          sumvals += nums[i];
       }
       return sumvals;
@@ -46,7 +46,7 @@ public class Summer {
      /* Find the largest number stored in the array so far
       and return it. */
       int highval = 0;
-      for(int i: nums){
+      for(int i = 0; i < nums.length; i++){
          if(nums[i] >= highval){
             highval = nums[i];
          }
@@ -57,8 +57,8 @@ public class Summer {
    public int low ( ) { 
      /* Find the smallest number stored in the array so far
       and return it. */
-      int lowval = nums[0];
-      for(int i: nums){
+      int lowval = 0;
+      for(int i = 0; i < count; i++){
          if(nums[i] <= lowval){
             lowval = nums[i];
          }
@@ -80,15 +80,15 @@ public class Summer {
       to be 0.0 so return that if the array has no numbers in it.
        */
       double average_val = 0.0;
-      if(nums.length == 0){
+      if(count == 0){
          return 0.0;
       }
       else{
          double sum = 0.0;
-         for(int i: nums){
+         for(int i = 0; i < nums.length; i++){
             sum += nums[i];
          }
-         average_val = sum/nums.length;
+         average_val = sum/count;
          return average_val;
       }
 
@@ -117,7 +117,7 @@ public class Summer {
       else{
          double sum = 0.0;
          int above_vals = 0;
-         for(int i: nums){
+         for(int i = 0; i < nums.length; i++){
             if(nums[i] > thresh){
                sum += nums[i];
                above_vals += 1;

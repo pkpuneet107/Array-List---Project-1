@@ -51,7 +51,7 @@ public class A1Main {
          and we are done.  Hint:  This is easier with the printStats method. */
 
         /*Your code here */
-       printStats(even_object, odd_object);
+        printStats(even_object, odd_object);
   }
 
       
