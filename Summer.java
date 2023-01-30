@@ -59,11 +59,16 @@ public class Summer {
       and return it. */
       int lowval = 0;
       for(int i = 0; i < count; i++){
-         if(nums[i] <= lowval){
-            lowval = nums[i];
+         for(int j = i + 1; j < count; j++){
+            if(nums[i] > nums[j]){
+               lowval = nums[i];
+               nums[i] = nums[j];
+               nums[j] = lowval;
+            }
          }
+
       }
-      return lowval;
+      return nums[0];
    }
    
    public double average( ) {
