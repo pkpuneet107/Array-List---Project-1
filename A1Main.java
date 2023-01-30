@@ -61,54 +61,31 @@ public class A1Main {
       inserted code prints output on the same line or a new line. */
     
     
-      System.out.print("Number of evens: ");
-      /*Your code here */
-      System.out.print(evenSummer.count());
+      System.out.print("Number of evens: " + evenSummer.count());
       System.out.println();
-      System.out.print("Sum of evens: ");
-      /*Your code here */
-      System.out.print(evenSummer.sum());
+      System.out.print("Sum of evens: " + evenSummer.sum());
+
       System.out.println();
-      System.out.print("Average of evens: ");
-      /*Your code here */
-      System.out.print(evenSummer.average());
+      System.out.print("Average of evens: " + evenSummer.average());
       System.out.println();
-      System.out.print("Largest even: ");
-      /*Your code here */
-      System.out.print(evenSummer.high());
+      System.out.print("Largest even: " + evenSummer.high());
       System.out.println();
-      System.out.print("Smallest even: ");
-      /*Your code here */
-      System.out.print(evenSummer.low());
+      System.out.print("Smallest even: " + evenSummer.low());
       System.out.println();
-      System.out.print("Average of evens over 10: ");
-      /*Your code here */
-      System.out.print(evenSummer.avgOver(10));
+      System.out.print("Average of evens over 10: " + evenSummer.avgOver(10));
       System.out.println();
       
-      System.out.print("Number of odds: ");
-      System.out.print(oddSummer.count());
-      /*Your code here */
+      System.out.print("Number of odds: " + oddSummer.count());
       System.out.println();
-      System.out.print("Sum of odds: ");
-      System.out.print(oddSummer.sum());
-      /*Your code here */
+      System.out.print("Sum of odds: " + oddSummer.sum());
       System.out.println();
-      System.out.print("Average of odds: ");
-      System.out.print(oddSummer.average());
-      /*Your code here */
+      System.out.print("Average of odds: " + oddSummer.average());
       System.out.println();
-      System.out.print("Largest odd: ");
-      /*Your code here */
-      System.out.print(oddSummer.high());
+      System.out.print("Largest odd: " + oddSummer.high());
       System.out.println();
-      System.out.print("Smallest odd: ");
-      /*Your code here */
-      System.out.print(oddSummer.low());
+      System.out.print("Smallest odd: " + oddSummer.low());
       System.out.println();
-      System.out.print("Average of odds over 10: ");
-      /*Your code here */
-      System.out.print(oddSummer.avgOver(10));
+      System.out.print("Average of odds over 10: " + oddSummer.avgOver(10));
       System.out.println();
   }
 
