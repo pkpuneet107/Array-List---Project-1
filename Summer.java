@@ -36,7 +36,7 @@ public class Summer {
       Note that the sum of ints is of type int, so return the int sum you get.  */
       /*Your code here*/
       int sumvals = 0;
-      for(int i = 0; i < nums.length; i++){
+      for(int i = 0; i < count; i++){
          sumvals += nums[i];
       }
       return sumvals;
@@ -46,7 +46,7 @@ public class Summer {
      /* Find the largest number stored in the array so far
       and return it. */
       int highval = 0;
-      for(int i = 0; i < nums.length; i++){
+      for(int i = 0; i < count; i++){
          if(nums[i] >= highval){
             highval = nums[i];
          }
@@ -90,7 +90,7 @@ public class Summer {
       }
       else{
          double sum = 0.0;
-         for(int i = 0; i < nums.length; i++){
+         for(int i = 0; i <count; i++){
             sum += nums[i];
          }
          average_val = sum/count;
@@ -122,7 +122,7 @@ public class Summer {
       else{
          double sum = 0.0;
          int above_vals = 0;
-         for(int i = 0; i < nums.length; i++){
+         for(int i = 0; i < count; i++){
             if(nums[i] > thresh){
                sum += nums[i];
                above_vals += 1;
